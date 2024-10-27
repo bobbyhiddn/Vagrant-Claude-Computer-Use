@@ -21,7 +21,6 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "install-chrome.sh"
   config.vm.provision "shell", path: "install-docker.sh"
   config.vm.provision "shell", path: "install-claude.sh", env: { "ANTHROPIC_API_KEY" => api_key }
-  config.vm.provision "shell", path: "install-awscli.sh"
 
   # Reboot the VM after these provisions
   config.vm.provision "shell", inline: "sudo reboot"
